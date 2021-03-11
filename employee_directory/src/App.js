@@ -1,10 +1,12 @@
 import Header from "./components/Header";
+import Table from "./components/Table"
 import './App.css';
 
 function App() {
   return (
     <>
-      <Header />;
+      <Header />
+      <Table />
     </>
   );
 }
