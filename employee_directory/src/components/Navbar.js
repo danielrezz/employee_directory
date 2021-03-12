@@ -41,14 +41,14 @@ function Navbar(props) {
                         </ul>
                         <form class="d-flex">
                             <input 
-                                value={props.search} 
+                                value={props.searchUsers} 
                                 onChange={props.handleInputChange} 
                                 class="form-control me-2" 
                                 type="search" 
                                 placeholder="Looking for someone?" 
                                 aria-label="Search" 
                             />
-                            <button class="btn btn-outline-info" type="submit">Search</button>
+                            <button onClick={props.handleFormSubmit} class="btn btn-outline-info" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
