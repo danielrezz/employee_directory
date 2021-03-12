@@ -1,8 +1,11 @@
 import React from "react";
 
-function Navbar() {
+function Navbar(props) {
+
     return (
         <>
+
+        <p></p>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">BED</a>
@@ -37,7 +40,14 @@ function Navbar() {
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Looking for someone?" aria-label="Search" />
+                            <input 
+                                value={props.search} 
+                                onChange={props.handleInputChange} 
+                                class="form-control me-2" 
+                                type="search" 
+                                placeholder="Looking for someone?" 
+                                aria-label="Search" 
+                            />
                             <button class="btn btn-outline-info" type="submit">Search</button>
                         </form>
                     </div>
