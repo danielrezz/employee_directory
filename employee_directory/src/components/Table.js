@@ -1,34 +1,23 @@
 import React from "react";
 
-function Table() {
+function Table(props) {
     return (
         <>
-            <table class="table table-hover">
+            <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col"></th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Occupation</th>
+                        <th scope="col">Location</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <th scope="row"><img alt={props.name} src={props.image}/></th>
+                        <td>{props.name}</td>
+                        <td>{props.occupation}</td>
+                        <td>{props.location}</td>
                     </tr>
                 </tbody>
             </table>
