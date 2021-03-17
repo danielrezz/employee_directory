@@ -6,13 +6,15 @@ import API from "./utils/API";
 
 class App extends Component {
   state = {
-    results: {}
+    results: []
   };
 
 
   componentDidMount() {
     API.getEmployees()
-      .then(res => this.setState({ results: res.data.results }))
+      .then(res => {
+        let results = res.data.results[0];
+        this.setState({ results: results })})
       .catch(err => console.log(err));
   };
 
@@ -24,8 +26,8 @@ class App extends Component {
             id={this.state.results.id}
             key={this.state.results.id}
             name={this.state.results.name}
-            email={this.state.results.email}
-            location={this.state.results.location}
+            // email={this.state.results.email}
+            // location={this.state.results.location}
           />
       </Container>
     );
