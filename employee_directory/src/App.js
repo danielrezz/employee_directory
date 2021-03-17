@@ -5,14 +5,10 @@ import Header from "./components/Header";
 import API from "./utils/API";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     results: {}
   };
 
-  // componentDidMount() {
-  //   this.getEmployees();
-  // };
 
   componentDidMount() {
     API.getEmployees()
@@ -20,7 +16,6 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  // Map over this.state.friends and render a Employee component for each friend object
   render() {
     return (
       <Container>
