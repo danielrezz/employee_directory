@@ -1,5 +1,18 @@
 import React from "react";
 
+const styles = {
+    table: {
+      marginBottom: 0
+    },
+    text: {
+        display: "flex",
+        justifyContent: "space-between"
+    },
+    border: {
+        border: "none"
+    }
+};
+
 function Employee(props) {
 
     return (
@@ -12,22 +25,14 @@ function Employee(props) {
         //             `${props.location.city}, ${props.location.state} - ${props.location.country}`).replace(/['"]+/g, '')}</li>
         // </ul>
 
-<table className="table table-hover">
-{/* <thead>
-  <tr>
-    <th scope="col">Photo</th>
-    <th scope="col">Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Location</th>
-  </tr>
-</thead> */}
+<table className="table table-hover" style={styles.table}>
+
 <tbody>
-  <tr>
-    <th scope="row"><img alt={props.name} src={props.picture.thumbnail}/></th>
-    <td>{JSON.stringify(`${props.name.first} ${props.name.last}`).replace(/['"]+/g, '')}</td>
-    <td>{JSON.stringify(props.email).replace(/['"]+/g, '')}</td>
-    <td>{JSON.stringify(`${props.location.city}, ${props.location.state} - ${props.location.country}`).replace(/['"]+/g, '')}</td>
-    <td></td>
+  <tr style={styles.text}>
+    <th style={styles.border} scope="row"><img alt={props.name} src={props.picture.thumbnail}/></th>
+    <td style={styles.border}>{JSON.stringify(`${props.name.first} ${props.name.last}`).replace(/['"]+/g, '')}</td>
+    <td style={styles.border}>{JSON.stringify(props.email).replace(/['"]+/g, '')}</td>
+    <td style={styles.border}>{JSON.stringify(`${props.location.city}, ${props.location.state} - ${props.location.country}`).replace(/['"]+/g, '')}</td>
   </tr>
 </tbody>
 </table>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Employee from "./components/Employee";
 import Container from "./components/Container";
 import Header from "./components/Header";
+// import Navbar from "./components/Navbar";
 import API from "./utils/API";
 
 class App extends Component {
@@ -15,16 +16,31 @@ class App extends Component {
       .then(res => {
         let results = res.data.results;
         console.log(res.data.results)
-        this.setState({ results: results })})
+        this.setState({ results: results })
+      })
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <Container>
-        <Header></Header>
+      <>
+        <Header>
+          
+        </Header>
+        <Container>
+        {/* <Navbar></Navbar> */}
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+        </table>
         {this.state.results.map(employee => (
-        <Employee
+          <Employee
             id={employee.id}
             key={employee.id}
             picture={employee.picture}
@@ -34,6 +50,7 @@ class App extends Component {
           />
         ))}
       </Container>
+      </>
     );
   }
 }
