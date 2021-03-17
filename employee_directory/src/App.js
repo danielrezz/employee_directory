@@ -13,7 +13,8 @@ class App extends Component {
   componentDidMount() {
     API.getEmployees()
       .then(res => {
-        let results = res.data.results[0];
+        let results = res.data.results;
+        console.log(res.data.results)
         this.setState({ results: results })})
       .catch(err => console.log(err));
   };
@@ -22,13 +23,15 @@ class App extends Component {
     return (
       <Container>
         <Header></Header>
+        {this.state.results.map(employee => (
         <Employee
-            id={this.state.results.id}
-            key={this.state.results.id}
-            name={this.state.results.name}
-            // email={this.state.results.email}
-            // location={this.state.results.location}
+            id={employee.id}
+            key={employee.id}
+            name={employee.name}
+            email={employee.email}
+            location={employee.location}
           />
+        ))}
       </Container>
     );
   }
