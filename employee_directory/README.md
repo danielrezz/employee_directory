@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# QuizNode
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
+We have decided to create an application where users can create and take quizzes online. Users will be required to create an account. This will allow users to save the quizzes that they create as well as save their scores on others quizzes. When a user wants to create a quiz they will have the option to write new questions or select from questions written by other users. When users want to take a quiz they are able to search for quizzes created by specific users or by quiz topic. When a user completes a quiz their score is saved and can be viewed by other users taking the same quiz.
 
-## Available Scripts
+## Prerequisites
+* [NodeJS](https://nodejs.org/)
 
-In the project directory, you can run:
+## Installing
 
-### `npm start`
+Clone the repository to your local development environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+git clone https://github.com/SergioAlmazan/Project-2.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Navigate to the clone directory in the terminal.
+```
+Run `npm install` to install all dependencies.
+```
+To use the application locally, the config.js file will need to have your local mysql connection information.\
+You'll also need to create the quiz_db in mysql workbench.
+```
+Once it's that's all done run `node server.js` in your CLI, and then open in your preferred browswer.
+```
+## Preview:
+![ScreenShot](/public/css/screenshot.PNG)
 
-### `npm test`
+## Deployed Link:
+[QuizNode](https://calm-journey-11508.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
+* [NodeJS](https://nodejs.org/)
+* Node Packages:
+    * [Express](https://www.npmjs.com/package/express)
+    * [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+    * [dotenv](https://www.npmjs.com/package/dotenv)
+    * [eslint](https://www.npmjs.com/package/eslint)
+    * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+    * [express-session](https://www.npmjs.com/package/express-session)
+    * [mysql2](https://www.npmjs.com/package/mysql2)
+    * [passport](https://www.npmjs.com/package/passport)
+    * [sequelize](https://www.npmjs.com/package/sequelize)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Authors
+Brantley Morris\
+Daniel Reza\
+Darrell Robinson\
+Sergio Almazan
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
