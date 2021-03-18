@@ -14,8 +14,15 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log(this.state.results);
     
-    this.state.results.sort();
+    this.setState({ results: this.state.results.slice().sort((a, b) => {
+      if (a.name.first < b.name.first) {
+        return -1
+      } if (a.name.first > b.name.first) {
+        return 1;
+      } return 0
+    }) }, () => {console.log(this.state.results)});
 
   };
 
