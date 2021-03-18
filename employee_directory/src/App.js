@@ -3,7 +3,7 @@ import Employee from "./components/Employee";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import SortButton from "./components/SortButton";
-// import Navbar from "./components/Navbar";
+import Search from "./components/Search";
 import API from "./utils/API";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,8 +23,7 @@ class App extends Component {
         return 1;
       } return 0
     }) }, () => {console.log(this.state.results)});
-
-  };
+  };  
 
   componentDidMount() {
     API.getEmployees()
@@ -43,7 +42,7 @@ class App extends Component {
           
         </Header>
         <Container>
-        {/* <Navbar></Navbar> */}
+        <Search />
         <table className="table table-hover">
           <thead>
             <tr>
