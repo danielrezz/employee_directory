@@ -2,14 +2,22 @@ import React, { Component } from "react";
 import Employee from "./components/Employee";
 import Container from "./components/Container";
 import Header from "./components/Header";
+import SortButton from "./components/SortButton";
 // import Navbar from "./components/Navbar";
 import API from "./utils/API";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
     results: []
   };
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+    
+    this.state.results.sort();
+
+  };
 
   componentDidMount() {
     API.getEmployees()
@@ -33,7 +41,7 @@ class App extends Component {
           <thead>
             <tr>
               <th scope="col">Photo</th>
-              <th scope="col">Name</th>
+              <th scope="col">Name<SortButton handleFormSubmit={this.handleFormSubmit}/></th>
               <th scope="col">Email</th>
               <th scope="col">Location</th>
             </tr>
