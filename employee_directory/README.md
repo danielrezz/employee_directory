@@ -33,6 +33,6 @@ Once it's that's all done run `npm start` in your CLI, and then open in your pre
     * [Bootstrap](https://www.npmjs.com/package/bcryptjs)
 
 ## Author
-Daniel Reza\
+Daniel Reza
 
 
