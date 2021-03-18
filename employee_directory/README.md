@@ -3,6 +3,8 @@
 ## Summary
 The Best Employee Directory (BED) is an application where users can access a list of randomly generated users as well as their contact information. Although this app demonstrates randomly generated employees, the same concept can be applied to unique lists of people. This is a handy app to have access to in case you need to quickly look up some contact information for colleagues, employees, or anyone else on your team.
 
+<img src="Screen Shot 2021-03-18 at 5.17.29 PM.png">
+
 ## Prerequisites
 * [React](https://reactjs.org/)
 
@@ -20,8 +22,6 @@ Run `npm install` to install all dependencies.
 ```
 Once it's that's all done run `npm start` in your CLI, and then open in your preferred browswer.
 ```
-## Preview:
-![ScreenShot](/public/css/screenshot.PNG)
 
 ## Deployed Link:
 [QuizNode](https://calm-journey-11508.herokuapp.com/)
