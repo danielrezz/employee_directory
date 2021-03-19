@@ -24,7 +24,7 @@ Once it's that's all done run `npm start` in your CLI, and then open in your pre
 ```
 
 ## Deployed Link:
-[QuizNode](https://calm-journey-11508.herokuapp.com/)
+[The BED](https://danielrezz.github.io/employee_directory/)
 
 ## Built With
 * [NodeJS](https://reactjs.org/)
