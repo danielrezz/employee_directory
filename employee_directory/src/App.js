@@ -14,7 +14,6 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.results);
     
     this.setState({ results: this.state.results.slice().sort((a, b) => {
       if (a.name.first < b.name.first) {
@@ -38,11 +37,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header>
-          
-        </Header>
+        <Header />
         <Container>
-        <Search />
+        <Search onChange={this.handleInputChange} />
         <table className="table table-hover">
           <thead>
             <tr>
@@ -53,10 +50,10 @@ class App extends Component {
             </tr>
           </thead>
         </table>
-        {this.state.results.map(employee => (
+        {this.state.results.map((employee, index) => (
           <Employee
+            key={index}
             id={employee.id}
-            key={employee.id}
             picture={employee.picture}
             name={employee.name}
             email={employee.email}
